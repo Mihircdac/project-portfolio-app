@@ -1,0 +1,6 @@
+
+services:
+  web:
+    build: ./app
+    ports:
+      - "9095:5000"

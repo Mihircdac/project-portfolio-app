@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Portfolio</title>
+</head>
+<body>
+    <h1>Project Portfolio</h1>
+    <ul>
+        {% for user, projects in projects.items() %}
+            <li><strong>{{ user }}</strong>
+                <ul>
+                    {% for project in projects %}
+                        <li><a href="{{ project.link }}">{{ project.name }}: {{ project.description }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
